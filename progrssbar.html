@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 600px;
+      }
+      table {
+        border-collapse: collapse;
+        text-align: center;
+        display: none;
+        padding: 0 500px;
+      }
+      th,
+      tr,
+      td {
+        border: 1px solid burlywood;
+        padding: 10px 80px;
+      }
+      .notes {
+        padding: 0 60px;
+        display: none;
+      }
+      p {
+        background-color: maroon;
+        color: white;
+      }
+      h3 {
+        color: aqua;
+      }
+      h2 {
+        display: none;
+      }
+      .last-section {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scroll Down To See The Content</h1>
+    <section>
+      <div class="main-contain">
+        <table>
+          <thead>
+            <th>Courses</th>
+            <th>Time</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Physics</td>
+              <td>Morning</td>
+            </tr>
+            <tr>
+              <td>Chemistry</td>
+              <td>Night</td>
+            </tr>
+            <tr>
+              <td>Computer</td>
+              <td>Day</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Notes</h2>
+      <div class="notes">
+        <h3>Physics</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi
+          voluptate veniam neque quis eaque laborum aliquid, maxime et ex
+          accusamus repellat ipsum incidunt excepturi doloremque laudantium
+          tempore error asperiores? Iure.
+        </p>
+        <h3>Chemistry</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+          doloribus dicta id culpa labore pariatur quisquam expedita. Modi
+          tenetur, enim, maiores dignissimos nulla facere, sed rerum doloribus
+          sequi sint tempora!
+        </p>
+        <h3>Computer</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+          doloribus cum corrupti inventore vitae velit asperiores est sed
+          architecto facilis, atque alias aliquid dignissimos? Doloremque
+          tempora numquam inventore quos provident!
+        </p>
+      </div>
+    </section>
+    <section>
+      <h2>Description</h2>
+      <p class="last-section">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+        expedita perferendis officiis magnam repellat commodi sed iusto porro
+        obcaecati, ea saepe molestiae, sunt corrupti, minus harum ducimus sequi
+        eligendi ut laboriosam temporibus aspernatur corporis cupiditate
+        repudiandae quos. Similique culpa nisi, illo saepe quidem alias
+        voluptatem laudantium sed reiciendis optio accusamus, molestiae omnis
+        facilis. Molestiae error ab blanditiis ex. Magnam quidem beatae possimus
+        accusamus cum, consequuntur eaque sequi amet error! Est laborum totam
+        sunt nulla, eius voluptate aut quas tempore? Officia, adipisci excepturi
+        est quis, quaerat tempore, quisquam vel asperiores labore rerum quidem
+        odio cum magnam. Omnis enim beatae optio consectetur?
+      </p>
+    </section>
+    <script>
+      const table = document.getElementsByTagName("table");
+      const notes = window.addEventListener("scroll", (e) => {
+        table[0].style.display = "block";
+        document.getElementsByClassName("notes")[0].style.display = "block";
+        document.getElementsByTagName("h2")[0].style.display = "block";
+        document.getElementsByClassName("last-section")[0].style.display =
+          "block";
+
+        window.scroll({
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

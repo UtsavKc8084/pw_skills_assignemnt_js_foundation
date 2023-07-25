@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-size: 25px;
+      }
+      .todo-app {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+      }
+      .todo-input {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+      #item {
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+      #item:hover {
+        font-size: 20px;
+      }
+      #todo-btn {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="todo-app">
+        <div class="todo-input">
+          <label for="item">Enter the items :</label><br />
+          <input type="text" name="item" id="item" /><br />
+          <button id="todo-btn" type="submit">Add Item</button>
+        </div>
+        <div>
+          <ul id="todo-items"></ul>
+        </div>
+      </div>
+    </section>
+    <script>
+      let ul = document.getElementById("todo-items");
+      let itemInput = document.getElementById("item");
+      let count = 0;
+      document.getElementById("todo-btn").addEventListener("click", (e) => {
+        e.preventDefault();
+        let li = document.createElement("li");
+        li.textContent =
+          `Item ${(count += 1)} : ` + document.getElementById("item").value;
+        ul.parentNode.insertBefore(li, ul);
+        itemInput.value = "";
+      });
+    </script>
+  </body>
+</html>

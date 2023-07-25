@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Movement</title>
+    <style>
+      #image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="image"
+      src="./daniel-sessler-Qt42jtmR7iQ-unsplash.jpg"
+      alt="Moving Image"
+    />
+    <script>
+      // Get references to the image element
+      const image = document.getElementById("image");
+
+      // Set initial position and movement speed
+      let xPos = 0;
+      let yPos = 0;
+      const movementSpeed = 10;
+
+      // Function to move the image based on arrow key input
+      function moveImage(event) {
+        switch (event.keyCode) {
+          case 37: // Left arrow key
+            xPos -= movementSpeed;
+            break;
+          case 38: // Up arrow key
+            yPos -= movementSpeed;
+            break;
+          case 39: // Right arrow key
+            xPos += movementSpeed;
+            break;
+          case 40: // Down arrow key
+            yPos += movementSpeed;
+            break;
+          default:
+            return; // If other keys are pressed, exit the function
+        }
+
+        // Update the image position using CSS styles
+        image.style.left = `${xPos}px`;
+        image.style.top = `${yPos}px`;
+      }
+
+      // Attach the moveImage function to the 'keydown' event of the document
+      document.addEventListener("keydown", moveImage);
+    </script>
+  </body>
+</html>

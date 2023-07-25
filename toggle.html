@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>The most affordable learning platform</h1>
+      <button class="btn-a btn-b">Change</button>
+    </div>
+    <script>
+      const btn = document.querySelectorAll("button");
+      const h1 = document.getElementsByTagName("h1");
+      const classes = btn[0].classList;
+      btn[0].addEventListener("click", (e) => {
+        const result = classes.toggle("btn-a");
+        h1[0].innerText = `${
+          result ? "PW Skills" : "The most affordable learning platform"
+        }`;
+      });
+    </script>
+  </body>
+</html>

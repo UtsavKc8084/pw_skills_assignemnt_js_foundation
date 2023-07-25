@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="course-contain">
+      <h3 id="title">Courses</h3>
+      <ul id="course-list">
+        <li id="info">No Content Add Till Now</li>
+      </ul>
+      <button type="submit" id="add-btn">Add Content</button>
+    </div>
+
+    <script>
+      const ul = document.getElementById("course-list");
+      const list = document.getElementById("list");
+      const add = document.getElementById("add-btn");
+      const info = document.getElementById("info");
+      const items = ["HTML", "CSS", "JavaScript", "Node", "React", "SQl"];
+
+      add.addEventListener("click", (e) => {
+        e.preventDefault();
+        info.style.display = "none";
+        let li = document.createElement("li");
+        if (items.length !== 0) {
+          li.textContent = items.shift();
+          ul.parentNode.insertBefore(li, ul);
+        } else {
+          let itemAdded = document.createElement("h3");
+          itemAdded.textContent = "all items have been added";
+          let courseDiv = document.getElementById("course-contain");
+          courseDiv.parentNode.insertBefore(itemAdded, courseDiv);
+        }
+      });
+    </script>
+  </body>
+</html>

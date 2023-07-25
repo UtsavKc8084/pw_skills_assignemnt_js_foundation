@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highlight Words with Length > 8</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="paragraph">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto at,
+      eius, molestiae, quisquam eaque assumenda temporibus iure dolorem deleniti
+      molestias doloremque tempore! Et dolore optio unde harum vel recusandae,
+      fugiat eius quasi numquam fugit nihil aperiam necessitatibus corrupti
+      aspernatur dolor esse explicabo id maxime rerum vero. Nesciunt dolor
+      laboriosam maiores tenetur nemo odit corporis cumque voluptates voluptatum
+      modi. Fugit laudantium officiis eligendi? Possimus impedit ea corporis
+      perferendis ipsa animi debitis aspernatur culpa? Repellat, quidem
+      consectetur ducimus sapiente aperiam possimus pariatur cum cumque! Debitis
+      sit, dolor est perspiciatis quisquam nobis hic, beatae officiis numquam
+      fugiat reprehenderit officia vero molestias nemo deleniti.
+    </p>
+
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      const words = paragraph.textContent.trim().split(/\s+/); // Split text into words
+      console.log(words);
+
+      for (let i = 0; i < words.length; i++) {
+        const word = words[i];
+        if (word.length > 8) {
+          const span = document.createElement("span");
+          span.className = "highlight";
+          span.textContent = word;
+          paragraph.innerHTML = paragraph.innerHTML.replace(
+            word,
+            span.outerHTML
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #color-btn {
+      margin: 250px 500px;
+      padding: 20px 40px;
+    }
+  </style>
+  <body>
+    <button id="color-btn">Color Button</button>
+    <script>
+      const colorArray = [
+        "red",
+        "blue",
+        "yellow",
+        "green",
+        "violet",
+        "marine",
+        "pink",
+      ];
+      document.getElementById("color-btn").addEventListener("click", (e) => {
+        const num = Math.floor(Math.random() * colorArray.length);
+        document.body.style.backgroundColor = `${colorArray[num]}`;
+      });
+    </script>
+  </body>
+</html>
