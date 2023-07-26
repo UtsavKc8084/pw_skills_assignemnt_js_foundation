@@ -2,7 +2,6 @@
 // // Write a JavaScript program that checks if the entered password matches the confirmed password. If the
 // // passwords match, the program should log "Password Matched. Password validation Successful." to the console.
 // // Otherwise, it should log "Password didn't match. Password validation unsuccessful" to the consoleQ
-/* 
 let pwFirst = prompt("Enter the password :");
 let pwSecond = prompt("Conform the password :");
 const regex = /[A-Z]/g;
@@ -64,7 +63,7 @@ L If the operator is one of the four valid operators (+, -, *, /), perform the c
 operation and store the result in a varia#le called resultP
 L If the operator is not one of the valid operators, log "Invalid operator" to the consoleQ
 */
-/*
+
 const num1 = parseInt(prompt("Enter the value for num1 : "));
 const num2 = parseInt(prompt("Enter the value for  num2 :"));
 const operator = prompt("Enter the mathematical operator (+,-,*,/):");
@@ -91,7 +90,6 @@ if (isNaN(num1) && isNaN(num2) && operator === "") {
   }
   console.log(`${num1} ${operator} ${num2} = ${result}`);
 }
-*/
 /* 
 3. Color Mixer
 Write a JavaScript program that takes in two strings representing colors and uses a switch statement to
@@ -102,7 +100,6 @@ L If color1 is "red" and color2 is "yellow" or vice versa, print "orange"P
 L If color1 is "#lue" and `color2" is "yellow" or vice versa, print "green"P
 L If any other com#ination of colors is input, the program should print "Invalid color com#ination"
 */
-/*
 const color1 = prompt("Enter the first color : ");
 const color2 = prompt("Enter the second color :");
 let result;
@@ -128,7 +125,6 @@ if (!checkColor) {
 } else {
   console.log(`The color combination of ${color1} and ${color2} is ${result}`);
 }
-*/
 
 /*
 4. Highest Marks
@@ -137,7 +133,7 @@ the marks of all five students in an array called "marks". Write a program that 
 finds the highest marks scored #y any student in the class. The highest marks must then #e displayed to the
 teacher using the console. Make sure you use the ternary operator to find the student with the highest marks
 */
-/*
+
 let arrayStudentMarks = new Array();
 for (let i = 0; i < 5; i++) {
   arrayStudentMarks.push(parseInt(prompt("Enter the marks :")));
@@ -148,7 +144,6 @@ arrayStudentMarks.forEach((ele) => {
   highestMarks = ele >= highestMarks ? ele : highestMarks;
 });
 console.log(`The highest marks of student is ${highestMarks}`);
-*/
 /*
 5. Capitalize
 You are #uilding a form where users can enter their names. You want to make sure that the first letter of the
@@ -156,7 +151,6 @@ name is always capitalized, even if the user forgets to do so. Write a program t
 string and uses the ternary operator to check if the first letter is lowercase. If it is, the program capitalizes it and
 returns the modified string. Otherwise, it returns the original string without any changes
 */
-/*
 const name = prompt("Enter the name :");
 const regex = /[a-z]/g;
 function checkName(name) {
@@ -166,7 +160,6 @@ function checkName(name) {
   console.log(capitalizedName);
 }
 checkName(name);
-*/
 /* 
 6. Vowel Counter
 We want to count the num#er of vowels in a person's name. Given a name as input, the program should iterate
@@ -183,13 +176,7 @@ console.log(
   `Total number of vowel present in ${personName} is ${vowelCheck(personName)}`
 );
 
-/*
-7. Remove Duplicates
-In an online shopping application, customers can add multiple items to their cart. However, sometimes
-customers accidentally add the same item more than once, resulting in duplicate items in their cart. The
-duplicate items not only make it difficult for the customer to track the items they want to purchase #ut also
-affect the accuracy of the purchase order.
-*/
+
 
 /*
 7. Remove Duplicates
